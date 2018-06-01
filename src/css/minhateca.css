@@ -1,0 +1,21 @@
+.logo {
+    background: url('../img/logo.png');
+    background-size: cover;
+    width: 301px;
+    height: 83px;
+}
+
+button i {
+    margin-right: 10px !important;
+}
+
+.content {
+    margin-top: 20px !important;
+    background: #EEE !important;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+}
+
+.select { width: 100% !important;}
+.select select { width: 100% !important;}
