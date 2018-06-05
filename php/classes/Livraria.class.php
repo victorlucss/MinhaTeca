@@ -7,7 +7,7 @@
             $estoque = 0;
 
             foreach($_SESSION['livros'] as $chave => $livro){
-            $estoque = $estoque + $livro->getQuant();
+            $estoque = $estoque + $livro->getQuantidade();
             }
 
             return $estoque;
@@ -24,5 +24,13 @@
                 unset($_SESSION['livros'][$id]);
                 $_SESSION['id']--;
             }
-        }}
+        }
+
+        function excluirLivro($id){
+            if($_SESSION['livros'][$id]) {
+                unset($_SESSION['livros'][$id]);
+                $_SESSION['id']--;
+            }
+        }
+    }
 ?>

@@ -16,6 +16,7 @@
 
 <?php
     if($_GET['r'] == true){
-        header("Location: index.php?p=gerenciar");
+      $Livraria->excluirLivro($_GET['v']);
+      header("Location: index.php?p=gerenciar&rmv=sim");
     }
 ?>
