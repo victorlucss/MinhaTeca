@@ -19,6 +19,10 @@
         $isVisible = "block";
         $message = "Livro vendido com sucesso";
         $type = "success";
+    }elseif($_GET['rmv'] == 'sim'){
+        $isVisible = "block";
+        $message = "Livro excluído com sucesso";
+        $type = "success";
     }
 ?>
 
@@ -36,9 +40,15 @@
     <div class="content">
         <h2>Gerenciar livros</h2>
 
+        <button class="button is-black" disabled>
+            <?php print($Livraria->getEstoque()); ?> livro<?php print(($Livraria->getEstoque() <= 1) ? "" : "s"); ?> em estoque
+        </button>
+
+        <div style="padding-top: 10px;"></div>
+
         <?php
             if($Livraria->getEstoque() == 0){
-                print('Nenhum livro adicionado. <br /> <a class="button" href="?p=adicionar">Adicione um livro agora!</a>');
+                print('<a class="button is-success" href="?p=adicionar">Adicione um livro agora :)</a>');
                 return;
             }
         ?>
@@ -61,7 +71,7 @@
                 <tr>
                     <td class="has-text-centered"><?php print($livro->getId()) ?></td>
                     <td><?php print($livro->getNome()) ?></td>
-                    <td><?php print("R$".$livro->getValor()) ?></td>
+                    <td><?php print("R$".str_replace(".",",",$livro->getValor())) ?></td>
                     <td><?php print($livro->getQuantidade()); ?></td>
                     <td><?php print(get_class($livro))?></td>
                     <td class="has-text-centered">
