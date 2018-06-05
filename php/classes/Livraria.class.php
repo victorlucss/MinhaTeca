@@ -32,5 +32,12 @@
                 $_SESSION['id']--;
             }
         }
+
+        //Edita o estoque do livro
+        function editarLivro($id, $quant){
+            if($_SESSION['livros'][$id]) {
+                $_SESSION['livros'][$id]->setQuantidade($quant);
+            }
+        }
     }
 ?>

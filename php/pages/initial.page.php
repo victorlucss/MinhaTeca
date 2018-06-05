@@ -7,7 +7,8 @@
       <div class="description">
         <div class="container">
             <a href="?p=adicionar"><button class="button is-medium"><i class="fas fa-plus"></i> Adicionar livro</button></a>
-            <a href="?p=gerenciar"><button class="button is-medium"><i class="fas fa-cogs"></i> Gerenciar livros</button></a>
+            <a href="?p=gerenciar"><button class="button is-medium"><i class="fas fa-address-book"></i> Gerenciar livros</button></a>
+            <a href="?p=gerenciarEstoque"><button class="button is-medium"><i class="fas fa-book"></i> Gerenciar estoque</button></a>
         </div>
       </div>
     </div>
