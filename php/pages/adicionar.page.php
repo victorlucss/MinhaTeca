@@ -108,7 +108,7 @@
 
             <div class="field">
                 <div class="control has-icons-left has-icons-right">
-                    <input class="input is-medium" type="number" name="valor" step="0.1" placeholder="Valor">
+                    <input class="input is-medium" type="number" min="0.1" name="valor" step="0.1" placeholder="Valor">
                     <span class="icon is-left">
                         <i class="far fa-money-bill-alt"></i>
                     </span>
@@ -117,7 +117,7 @@
 
             <div class="field">
                 <div class="control has-icons-left has-icons-right">
-                    <input class="input is-medium" type="number" name="quantidade" placeholder="Quantidade">
+                    <input class="input is-medium" type="number" min="1" name="quantidade" placeholder="Quantidade">
                     <span class="icon is-left">
                         <i class="fas fa-dice-six"></i>
                     </span>
