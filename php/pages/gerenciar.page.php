@@ -36,6 +36,12 @@
     <div class="content">
         <h2>Gerenciar livros</h2>
 
+        <?php
+            if($Livraria->getEstoque() == 0){
+                print('Nenhum livro adicionado. <br /> <a class="button" href="?p=adicionar">Adicione um livro agora!</a>');
+                return;
+            }
+        ?>
         <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
             <thead class="thead">
                 <tr>
