@@ -34,6 +34,10 @@ abstract class Livro{
         return $this->quantidade;
     }
 
+    function setQuantidade($quantidade){
+        $this->quantidade = $quantidade;
+    }
+
     function vender(){
         $this->quantidade = $this->getQuantidade() - 1;
     }
